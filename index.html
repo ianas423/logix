@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIX | Premium Software House & Tech Innovation Hub</title>
+  <meta name="description" content="We engineer next-generation web applications, AI solutions, mobile ecosystems, and enterprise software. Explore open career opportunities.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- 1. WEBSITE PRELOADER -->
+  <div class="site-preloader">
+    <div class="preloader-center-box">
+      <div class="preloader-cube">
+        <i class="fa-solid fa-cube"></i>
+      </div>
+      <div class="preloader-counter">0%</div>
+      <div class="preloader-progress-bar">
+        <div class="preloader-progress-fill"></div>
+      </div>
+      <div style="margin-top: 14px; font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase;">
+        Initializing LOGIX Systems
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CUSTOM MAGNETIC CURSOR -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- 3. PAGE TRANSITION OVERLAY -->
+  <div class="page-transition-curtain"></div>
+
+  <!-- 4. FULLSCREEN MENU ANIMATION OVERLAY -->
+  <div id="fullscreen-menu-overlay" class="fullscreen-nav-overlay">
+    <button id="btn-close-fs-menu" class="fs-menu-close-btn" aria-label="Close Fullscreen Menu">&times;</button>
+    <div class="container" style="text-align: center;">
+      <div class="badge-pill" style="margin-bottom: 24px;">Navigation Matrix</div>
+      <ul class="fs-nav-links-list">
+        <li class="fs-nav-link-item"><a href="index.html">01. Home</a></li>
+        <li class="fs-nav-link-item"><a href="about.html">02. About Us</a></li>
+        <li class="fs-nav-link-item"><a href="services.html">03. Services & Pricing</a></li>
+        <li class="fs-nav-link-item"><a href="team.html">04. Our Team</a></li>
+        <li class="fs-nav-link-item"><a href="careers.html">05. Careers & Perks</a></li>
+        <li class="fs-nav-link-item"><a href="jobs.html">06. Open Vacancies</a></li>
+        <li class="fs-nav-link-item"><a href="apply.html">07. Apply for Job</a></li>
+        <li class="fs-nav-link-item"><a href="contact.html">08. Contact Us</a></li>
+        <li class="fs-nav-link-item"><a href="dashboard.html" style="color: var(--secondary);">09. Admin Dashboard</a></li>
+      </ul>
+      <div style="margin-top: 40px; color: var(--text-dim); font-size: 0.9rem;">
+        Press <kbd style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">ESC</kbd> to exit fullscreen navigation
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Mouse Glow -->
+  <div class="interactive-mouse-aura"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+        <span>LOGIX<span style="color: var(--primary);">.</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="jobs.html" class="nav-link">Jobs</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-group">
+        <!-- Fullscreen Menu Button -->
+        <button id="btn-open-fullscreen-menu" class="btn btn-secondary btn-sm" title="Toggle Fullscreen Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+          <span>Menu</span>
+        </button>
+
+        <a href="dashboard.html" class="dashboard-pill-btn" title="Open Admin Portal">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Admin Portal</span>
+        </a>
+
+        <a href="apply.html" class="btn btn-primary btn-sm">
+          <span>Apply Now</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer">
+    <a href="index.html" class="mobile-nav-link active"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="about.html" class="mobile-nav-link"><span>About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="team.html" class="mobile-nav-link"><span>Our Team</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="careers.html" class="mobile-nav-link"><span>Careers</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="jobs.html" class="mobile-nav-link"><span>Open Vacancies</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="apply.html" class="mobile-nav-link"><span>Apply for Job</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html" class="mobile-nav-link"><span>Contact Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="dashboard.html" class="mobile-nav-link" style="color: var(--secondary);"><span>Admin Dashboard</span> <i class="fa-solid fa-gauge-high"></i></a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION: FULL SCREEN TEXT & SVG MORPH ANIMATION -->
+    <section class="fullscreen-text-hero">
+      
+      <!-- 5. SVG MORPH ANIMATION (Organic Fluid Background Shape) -->
+      <svg class="svg-morph-canvas" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <path class="morph-path-animated" d="M231.2,148.9C278.4,198.8,284.8,286.2,251.2,348.6C217.6,411,144,448.4,85.2,427.6C26.4,406.8,-17.6,327.8,3.2,263.6C24,199.4,109.6,150,174.4,117.2C239.2,84.4,184,99,231.2,148.9Z"></path>
+      </svg>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        
+        <div class="badge-pill">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Autonomous AI & Software House</span>
+        </div>
+
+        <!-- 6. SPLIT TEXT ANIMATION ON HEADLINE -->
+        <h1 class="kinetic-headline">
+          <span class="split-text-target">ENGINEERING THE</span><br>
+          <span class="gradient-text split-text-target">FUTURE OF SOFTWARE</span><br>
+          <span id="kinetic-flip-word" class="kinetic-word-flip">ENTERPRISE SAAS</span>
+        </h1>
+
+        <p style="font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--text-muted); max-width: 760px; margin: 0 auto 40px; line-height: 1.7;">
+          LOGIX is a premier software house delivering scalable web ecosystems, autonomous AI systems, and cross-platform mobile apps while recruiting the top 1% of engineering talent.
+        </p>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px;">
+          <a href="#scrollytelling" class="btn btn-primary btn-lg">
+            <span>Explore Engineering Process</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="jobs.html" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Browse Job Openings</span>
+          </a>
+          <a href="dashboard.html" class="btn btn-outline btn-lg" style="border-color: rgba(6,182,212,0.4); color: var(--secondary);">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span>Admin Live Console</span>
+          </a>
+        </div>
+
+        <!-- Metric Badges Strip with 3D Tilt -->
+        <div class="stats-strip" style="max-width: 1040px; margin: 0 auto;">
+          <div class="stat-item tilt-card-3d">
+            <div class="stat-number">99.8%</div>
+            <div class="stat-label">On-Time Sprint Delivery</div>
+          </div>
+          <div class="stat-item tilt-card-3d">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Production Deployments</div>
+          </div>
+          <div class="stat-item tilt-card-3d">
+            <div class="stat-number">45+</div>
+            <div class="stat-label">Senior In-House Engineers</div>
+          </div>
+          <div class="stat-item tilt-card-3d">
+            <div class="stat-number">4.9 / 5</div>
+            <div class="stat-label">Client Satisfaction Score</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. INFINITE TWO-WAY MARQUEE -->
+    <section class="infinite-marquee-section">
+      <!-- Row 1: Forward -->
+      <div class="marquee-row">
+        <div class="marquee-group">
+          <span class="marquee-pill"><i class="fa-brands fa-react" style="color: #61dafb;"></i> React 19 & Next.js 16</span>
+          <span class="marquee-pill"><i class="fa-solid fa-code" style="color: #3178c6;"></i> TypeScript Strict</span>
+          <span class="marquee-pill"><i class="fa-brands fa-python" style="color: #ffd43b;"></i> Python & PyTorch</span>
+          <span class="marquee-pill"><i class="fa-brands fa-docker" style="color: #0db7ed;"></i> Docker & Kubernetes</span>
+          <span class="marquee-pill"><i class="fa-brands fa-aws" style="color: #ff9900;"></i> AWS Multi-AZ Mesh</span>
+          <span class="marquee-pill"><i class="fa-solid fa-brain" style="color: #ec4899;"></i> LangChain & RAG</span>
+          <span class="marquee-pill"><i class="fa-solid fa-database" style="color: #336791;"></i> PostgreSQL & Redis</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-pill"><i class="fa-brands fa-react" style="color: #61dafb;"></i> React 19 & Next.js 16</span>
+          <span class="marquee-pill"><i class="fa-solid fa-code" style="color: #3178c6;"></i> TypeScript Strict</span>
+          <span class="marquee-pill"><i class="fa-brands fa-python" style="color: #ffd43b;"></i> Python & PyTorch</span>
+          <span class="marquee-pill"><i class="fa-brands fa-docker" style="color: #0db7ed;"></i> Docker & Kubernetes</span>
+          <span class="marquee-pill"><i class="fa-brands fa-aws" style="color: #ff9900;"></i> AWS Multi-AZ Mesh</span>
+          <span class="marquee-pill"><i class="fa-solid fa-brain" style="color: #ec4899;"></i> LangChain & RAG</span>
+          <span class="marquee-pill"><i class="fa-solid fa-database" style="color: #336791;"></i> PostgreSQL & Redis</span>
+        </div>
+      </div>
+
+      <!-- Row 2: Reverse -->
+      <div class="marquee-row marquee-reverse">
+        <div class="marquee-group">
+          <span class="marquee-pill"><i class="fa-brands fa-figma" style="color: #f24e1e;"></i> Figma Design Tokens</span>
+          <span class="marquee-pill"><i class="fa-solid fa-shield-halved" style="color: #10b981;"></i> SOC 2 Cloud Security</span>
+          <span class="marquee-pill"><i class="fa-solid fa-vial-circle-check" style="color: #8b5cf6;"></i> Playwright Automated E2E</span>
+          <span class="marquee-pill"><i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> Sub-second Core Web Vitals</span>
+          <span class="marquee-pill"><i class="fa-brands fa-apple" style="color: #fff;"></i> iOS Native (Swift)</span>
+          <span class="marquee-pill"><i class="fa-brands fa-android" style="color: #3ddc84;"></i> Android Native (Kotlin)</span>
+          <span class="marquee-pill"><i class="fa-solid fa-users" style="color: #06b6d4;"></i> Dedicated Agile Squads</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-pill"><i class="fa-brands fa-figma" style="color: #f24e1e;"></i> Figma Design Tokens</span>
+          <span class="marquee-pill"><i class="fa-solid fa-shield-halved" style="color: #10b981;"></i> SOC 2 Cloud Security</span>
+          <span class="marquee-pill"><i class="fa-solid fa-vial-circle-check" style="color: #8b5cf6;"></i> Playwright Automated E2E</span>
+          <span class="marquee-pill"><i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> Sub-second Core Web Vitals</span>
+          <span class="marquee-pill"><i class="fa-brands fa-apple" style="color: #fff;"></i> iOS Native (Swift)</span>
+          <span class="marquee-pill"><i class="fa-brands fa-android" style="color: #3ddc84;"></i> Android Native (Kotlin)</span>
+          <span class="marquee-pill"><i class="fa-solid fa-users" style="color: #06b6d4;"></i> Dedicated Agile Squads</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SCROLLYTELLING WEBSITE SECTION -->
+    <section id="scrollytelling" class="scrollytelling-wrapper">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-pill">
+            <i class="fa-solid fa-compass"></i>
+            <span>Interactive Scrollytelling</span>
+          </div>
+          <h2 class="section-title">The LOGIX Delivery Blueprint</h2>
+          <p class="section-subtitle">
+            Scroll down to walk through each chapter of how our squads architect and launch mission-critical platforms.
+          </p>
+        </div>
+
+        <div class="scrolly-grid">
+          
+          <!-- Sticky Left Visual Display -->
+          <div class="scrolly-sticky-box">
+            <span id="scrolly-active-badge" class="badge-pill" style="margin-bottom: 12px;">Stage 01</span>
+            <h3 id="scrolly-active-title" style="font-size: 1.8rem; color: #fff; margin-bottom: 12px;">
+              Discovery & Systems Mapping
+            </h3>
+            <p id="scrolly-active-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;">
+              We reverse-engineer business logic, audit existing infrastructure, and model schema relationships before writing a single line of production code.
+            </p>
+
+            <!-- Dynamic Interactive Architecture Diagram Box -->
+            <div id="scrolly-active-diagram" style="background: rgba(7,9,19,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 12px;"><i class="fa-solid fa-sitemap"></i></div>
+              <div style="font-weight: 700; color: #fff; font-size: 1.05rem;">Entity-Relationship & Cloud Blueprint</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">Zero Technical Debt Protocol Active</div>
+            </div>
+          </div>
+
+          <!-- Scrolling Steps on the Right -->
+          <div class="scrolly-steps-container">
+            
+            <!-- Step 1 -->
+            <div class="scrolly-step-card active-step" 
+                 data-badge="Stage 01" 
+                 data-title="Discovery & Systems Mapping" 
+                 data-desc="We reverse-engineer business logic, audit existing infrastructure, and model schema relationships before writing a single line of production code."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--primary); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-sitemap'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Entity-Relationship & Cloud Blueprint&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Zero Technical Debt Protocol Active&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">01</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Architecture & Data Modeling</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Our Principal Architects map data flows, boundary microservices, and database constraints in Figma and Mermaid diagrams to remove ambiguity early.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="scrolly-step-card" 
+                 data-badge="Stage 02" 
+                 data-title="TypeScript Core & Microservices" 
+                 data-desc="We spin up typed React 19/Next.js frontend applications, Node.js/Python microservices, and Prisma database migrations with automated linting."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--secondary); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-code'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Strongly-Typed Distributed Logic&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;TypeScript Strict Mode Enforced&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 8px;">02</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">High-Velocity Sprint Execution</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Daily pull request reviews, asynchronous sprint updates, and live staging URLs allow stakeholders to test features the moment they are compiled.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="scrolly-step-card" 
+                 data-badge="Stage 03" 
+                 data-title="Automated Playwright QA & Security" 
+                 data-desc="Every route, component, and API endpoint passes through automated end-to-end regression tests and penetration security scans."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--accent); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-shield-halved'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Automated Playwright & Pen Testing&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;100% Pass Rate on Pull Requests&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px;">03</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Automated Quality & Penetration Hardening</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                We verify responsiveness, WCAG AA accessibility, performance Core Web Vitals, and security headers before code hits production.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="scrolly-step-card" 
+                 data-badge="Stage 04" 
+                 data-title="Zero-Downtime Global Deployment" 
+                 data-desc="Canary releases on Kubernetes with automated rollback triggers ensure continuous, zero-interruption availability for global users."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--success); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-rocket'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Canary Kubernetes Multi-Region Mesh&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;99.99% Global Uptime Service Level&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--success); margin-bottom: 8px;">04</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Global Edge Orchestration</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Multi-region cloud infrastructure, edge caching, and real-time observability with Prometheus and Datadog monitoring.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. STACKING CARDS SECTION -->
+    <section class="stacking-cards-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-pill">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Sticky Overlapping Hierarchy</span>
+          </div>
+          <h2 class="section-title">The 4 Pillars of LOGIX Architecture</h2>
+          <p class="section-subtitle">
+            Notice how each architectural layer seamlessly locks and stacks on scroll.
+          </p>
+        </div>
+
+        <div class="stacking-cards-list">
+          
+          <!-- Stack Card 1 -->
+          <div class="stacked-card-item">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span class="badge-pill" style="margin: 0; color: var(--primary);">Pillar 01</span>
+              <span style="color: var(--primary); font-size: 1.8rem;"><i class="fa-solid fa-brain"></i></span>
+            </div>
+            <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 14px;">Autonomous Intelligence & Agentic AI</h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 780px;">
+              We integrate enterprise LLMs directly with relational data stores, automating customer support, compliance checks, and real-time analytics with strict guardrails against hallucination.
+            </p>
+          </div>
+
+          <!-- Stack Card 2 -->
+          <div class="stacked-card-item">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span class="badge-pill" style="margin: 0; color: var(--secondary);">Pillar 02</span>
+              <span style="color: var(--secondary); font-size: 1.8rem;"><i class="fa-solid fa-cloud"></i></span>
+            </div>
+            <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 14px;">Elastic Microservices & Kubernetes Mesh</h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 780px;">
+              Built for seamless horizontal scaling. Microservices scale automatically from 3 to 100+ replicas in response to incoming traffic spikes, without manual dev intervention.
+            </p>
+          </div>
+
+          <!-- Stack Card 3 -->
+          <div class="stacked-card-item">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span class="badge-pill" style="margin: 0; color: var(--accent);">Pillar 03</span>
+              <span style="color: var(--accent); font-size: 1.8rem;"><i class="fa-solid fa-lock"></i></span>
+            </div>
+            <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 14px;">Zero-Trust Encryption & Governance</h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 780px;">
+              End-to-end TLS 1.3 encryption, hardware-security-module (HSM) key storage, role-based fine-grained permissions, and audit logs complying with SOC 2, HIPAA, and GDPR standards.
+            </p>
+          </div>
+
+          <!-- Stack Card 4 -->
+          <div class="stacked-card-item">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span class="badge-pill" style="margin: 0; color: var(--success);">Pillar 04</span>
+              <span style="color: var(--success); font-size: 1.8rem;"><i class="fa-solid fa-gem"></i></span>
+            </div>
+            <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 14px;">Human-Centric UI/UX Token Systems</h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 780px;">
+              Unified design tokens in Figma mapped automatically to React and Tailwind components. Gives applications unified typography, tactile feedback, and instantaneous sub-second response times.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. 3D CARD GALLERY REVOLVING CAROUSEL -->
+    <section class="gallery-3d-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-pill">
+            <i class="fa-solid fa-cube"></i>
+            <span>3D Perspective Carousel</span>
+          </div>
+          <h2 class="section-title">Revolving 3D Technology Showcase</h2>
+          <p class="section-subtitle">
+            Click any card to spin it to the front, or use the interactive navigation controls.
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 20px;">
+          <button id="gallery-prev-btn" class="scroll-arrow-btn" aria-label="Previous 3D Card"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="gallery-next-btn" class="scroll-arrow-btn" aria-label="Next 3D Card"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="gallery-3d-viewport">
+          <div id="gallery-3d-stage" class="gallery-3d-stage">
+            
+            <!-- Card 1 -->
+            <div class="gallery-3d-card">
+              <div>
+                <span class="job-badge-tag badge-engineering">Core Tech</span>
+                <h3 style="font-size: 1.3rem; color: #fff; margin-top: 14px; margin-bottom: 8px;">Next.js 16 & React 19</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  Server Actions, Concurrent Mode rendering, and edge streaming for ultra-responsive applications.
+                </p>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--primary);"><i class="fa-solid fa-bolt"></i> Instant hydration</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="gallery-3d-card">
+              <div>
+                <span class="job-badge-tag badge-ai">Intelligence</span>
+                <h3 style="font-size: 1.3rem; color: #fff; margin-top: 14px; margin-bottom: 8px;">LangChain & RAG</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  Semantic embeddings, hybrid vector search, and custom domain-specific fine-tuning.
+                </p>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--secondary);"><i class="fa-solid fa-brain"></i> Vector DBs</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="gallery-3d-card">
+              <div>
+                <span class="job-badge-tag badge-devops">Cloud Mesh</span>
+                <h3 style="font-size: 1.3rem; color: #fff; margin-top: 14px; margin-bottom: 8px;">Kubernetes Orchestration</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  Automated container provisioning, canary routing, and self-healing service discovery.
+                </p>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--success);"><i class="fa-solid fa-shield-halved"></i> 99.99% SLA</div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="gallery-3d-card">
+              <div>
+                <span class="job-badge-tag badge-design">Design Token</span>
+                <h3 style="font-size: 1.3rem; color: #fff; margin-top: 14px; margin-bottom: 8px;">Figma to Code Pipeline</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  Live synchronized variables, typography scales, and theme modes with zero design drift.
+                </p>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--accent);"><i class="fa-solid fa-palette"></i> Automated Tokens</div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="gallery-3d-card">
+              <div>
+                <span class="job-badge-tag badge-qa">QA Engineering</span>
+                <h3 style="font-size: 1.3rem; color: #fff; margin-top: 14px; margin-bottom: 8px;">Playwright E2E Suites</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  Automated cross-browser visual regressions and continuous integration safeguards.
+                </p>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--warning);"><i class="fa-solid fa-check-double"></i> 100% PR Guard</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HORIZONTAL SCROLL FLAGSHIP ECOSYSTEM SECTION -->
+    <section class="horizontal-scroll-wrapper">
+      <div class="container">
+        <div class="horizontal-scroll-header">
+          <div>
+            <div class="badge-pill">
+              <i class="fa-solid fa-arrows-left-right"></i>
+              <span>Horizontal Scroll Track</span>
+            </div>
+            <h2 class="section-title" style="margin-bottom: 8px;">Flagship Software Platforms</h2>
+            <p style="color: var(--text-muted); font-size: 1rem;">
+              Drag or use controls to traverse our proprietary platforms.
+            </p>
+          </div>
+
+          <div class="horizontal-controls">
+            <button id="scroll-left-btn" class="scroll-arrow-btn" aria-label="Scroll Left">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button id="scroll-right-btn" class="scroll-arrow-btn" aria-label="Scroll Right">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="horizontal-track-container" class="horizontal-track-container">
+        <div class="horizontal-track">
+          
+          <div class="horizontal-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <span class="job-badge-tag badge-engineering">Platform 01</span>
+                <span style="color: var(--secondary); font-size: 0.85rem;"><i class="fa-solid fa-cloud"></i> Kubernetes Native</span>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fff;">Logix CloudMesh™</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+                Multi-cloud automated mesh that coordinates containerized microservices across AWS and GCP with zero configuration drift.
+              </p>
+              <div class="job-tags-container" style="margin-bottom: 24px;">
+                <span class="skill-pill">Kubernetes</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Go</span>
+              </div>
+            </div>
+            <a href="services.html" class="btn btn-outline btn-sm">Inspect Architecture</a>
+          </div>
+
+          <div class="horizontal-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <span class="job-badge-tag badge-ai">Platform 02</span>
+                <span style="color: var(--accent); font-size: 0.85rem;"><i class="fa-solid fa-brain"></i> Autonomous Agent</span>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fff;">Synapse AI Studio™</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+                Enterprise generative intelligence platform featuring vector search pipelines and autonomous workflow bots.
+              </p>
+              <div class="job-tags-container" style="margin-bottom: 24px;">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">LangChain</span>
+                <span class="skill-pill">RAG</span>
+              </div>
+            </div>
+            <a href="services.html" class="btn btn-outline btn-sm">Inspect Architecture</a>
+          </div>
+
+          <div class="horizontal-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <span class="job-badge-tag badge-design">Platform 03</span>
+                <span style="color: var(--primary); font-size: 0.85rem;"><i class="fa-solid fa-palette"></i> Design Tokens</span>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fff;">Nexus Universal UI™</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+                Automated token pipeline connecting Figma design libraries straight into typed React and Tailwind components.
+              </p>
+              <div class="job-tags-container" style="margin-bottom: 24px;">
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Tailwind</span>
+              </div>
+            </div>
+            <a href="services.html" class="btn btn-outline btn-sm">Inspect Architecture</a>
+          </div>
+
+          <div class="horizontal-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <span class="job-badge-tag badge-qa">Platform 04</span>
+                <span style="color: var(--success); font-size: 0.85rem;"><i class="fa-solid fa-shield-halved"></i> Automated CI/CD</span>
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fff;">HyperFlow CI/CD™</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+                High-speed build runner executing end-to-end Playwright tests, automated rollbacks, and instant pull request previews.
+              </p>
+              <div class="job-tags-container" style="margin-bottom: 24px;">
+                <span class="skill-pill">Playwright</span>
+                <span class="skill-pill">GitHub Actions</span>
+              </div>
+            </div>
+            <a href="services.html" class="btn btn-outline btn-sm">Inspect Architecture</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CINEMATIC IMAGE REVEAL -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Image Reveal Masks</span>
+          </div>
+          <h2 class="section-title">Built with Architectural Precision</h2>
+          <p class="section-subtitle">
+            Experience our focus on visual craftsmanship and high-performance execution.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px;">
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" alt="Clean Code Architecture" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">100% Strongly-Typed TypeScript</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Every interface, mutation, and state tree is statically validated to guarantee zero runtime crashes.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" alt="Interactive Design Systems" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Liquid-Smooth Micro-Interactions</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Sub-60fps fluid UI states, glassmorphic lighting, and responsive gestures engineered to delight users.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800" alt="Cybersecurity & Cloud Systems" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 8px;">Bank-Grade Cloud Security</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Zero-trust authentication, cryptographic key rotation, and isolated container sandboxing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="section" style="padding: 90px 0;">
+      <div class="container">
+        <div class="glass-card" style="text-align: center; padding: 70px 40px; background: linear-gradient(135deg, rgba(19, 27, 49, 0.95), rgba(99, 102, 241, 0.1)); border-color: rgba(99, 102, 241, 0.4);">
+          <div class="badge-pill">
+            <i class="fa-solid fa-handshake"></i>
+            <span>Ready to Build Tomorrow?</span>
+          </div>
+          <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 800; margin-bottom: 20px;">
+            Let’s Construct Your Next <span class="gradient-text">Breakthrough Product</span>
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto 36px; line-height: 1.7;">
+            Whether you want to commission a dedicated engineering squad or apply to join our high-performance team, we are eager to hear from you.
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">
+              <span>Initiate a Project</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="careers.html" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Explore Company Culture</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+            <span>LOGIX<span style="color: var(--primary);">.</span></span>
+          </a>
+          <p>
+            An elite software engineering and recruitment hub. Designing, developing, and deploying resilient software that drives industry leaders.
+          </p>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted);">
+            <i class="fa-solid fa-envelope" style="color: var(--primary);"></i>
+            <span>contact@logix.dev</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+            <i class="fa-solid fa-phone" style="color: var(--secondary);"></i>
+            <span>+1 (555) 019-2831</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About LOGIX</a></li>
+            <li><a href="team.html"><i class="fa-solid fa-chevron-right"></i> Leadership & Team</a></li>
+            <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers & Perks</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Web Application Dev</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> AI & Intelligent Agents</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Mobile App Engineering</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> UI/UX System Design</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Recruitment & Portal</h4>
+          <ul class="footer-links">
+            <li><a href="jobs.html"><i class="fa-solid fa-chevron-right"></i> Open Positions</a></li>
+            <li><a href="apply.html"><i class="fa-solid fa-chevron-right"></i> Submit Application</a></li>
+            <li><a href="dashboard.html" style="color: var(--secondary); font-weight: 600;"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Request Consultation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LOGIX Software House. All rights reserved. Built with TypeScript & Semantic Standards.</div>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jobs-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | LOGIX Management Portal</title>
+  <meta name="description" content="Manage employees, job vacancies, and incoming candidate job applications in real time.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+  <!-- 1. WEBSITE PRELOADER -->
+  <div class="site-preloader">
+    <div class="preloader-center-box">
+      <div class="preloader-cube"><i class="fa-solid fa-cube"></i></div>
+      <div class="preloader-counter">0%</div>
+      <div class="preloader-progress-bar"><div class="preloader-progress-fill"></div></div>
+      <div style="margin-top: 14px; font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase;">
+        Authenticating Admin Console
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CUSTOM MAGNETIC CURSOR -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- 3. PAGE TRANSITION CURTAIN -->
+  <div class="page-transition-curtain"></div>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-logo" style="font-size: 1.3rem;">
+          <div class="logo-icon" style="width: 36px; height: 36px; font-size: 1rem;"><i class="fa-solid fa-cube"></i></div>
+          <span>LOGIX<span style="color: var(--primary);">.</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-user">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Admin Avatar" class="user-avatar">
+        <div class="user-info">
+          <h4>Muhammad Anas</h4>
+          <p><i class="fa-solid fa-circle-check"></i> Super Administrator</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-link active" data-tab="overview">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Dashboard Overview</span>
+        </div>
+        <div class="sidebar-link" data-tab="employees">
+          <i class="fa-solid fa-users"></i>
+          <span>Employee Directory</span>
+        </div>
+        <div class="sidebar-link" data-tab="jobs">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Job Vacancies</span>
+        </div>
+        <div class="sidebar-link" data-tab="applications">
+          <i class="fa-solid fa-file-signature"></i>
+          <span>Candidate Pipeline</span>
+          <span class="sidebar-badge" id="sidebar-app-count">Live</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: flex-start;">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Main Website</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button id="btn-toggle-sidebar" class="btn btn-secondary btn-sm" style="display: none;" aria-label="Toggle Sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="topbar-title">
+            <h1 id="dashboard-section-title">Dashboard Overview</h1>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button id="btn-open-post-job" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-plus"></i>
+            <span>Post New Job</span>
+          </button>
+          <button id="btn-open-add-employee" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Add Employee</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- INFINITE LIVE TICKER -->
+      <div class="infinite-marquee-section" style="padding: 16px 0; background: rgba(7, 9, 19, 0.95);">
+        <div class="marquee-row" style="margin-bottom: 0;">
+          <div class="marquee-group" style="animation-duration: 25s;">
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-circle-dot" style="color: var(--success);"></i> System Status: Operational 100%</span>
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-user-check" style="color: var(--primary);"></i> Talent Pipeline: Actively Ingesting</span>
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-database" style="color: var(--secondary);"></i> Storage Engine: LocalStorage Active</span>
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-shield-halved" style="color: var(--accent);"></i> Security Protocol: RBAC Enabled</span>
+          </div>
+          <div class="marquee-group" style="animation-duration: 25s;" aria-hidden="true">
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-circle-dot" style="color: var(--success);"></i> System Status: Operational 100%</span>
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-user-check" style="color: var(--primary);"></i> Talent Pipeline: Actively Ingesting</span>
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-database" style="color: var(--secondary);"></i> Storage Engine: LocalStorage Active</span>
+            <span class="marquee-pill" style="padding: 6px 16px; font-size: 0.82rem;"><i class="fa-solid fa-shield-halved" style="color: var(--accent);"></i> Security Protocol: RBAC Enabled</span>
+          </div>
+        </div>
+      </div>
+
+      <main class="dashboard-body">
+        
+        <!-- TAB 1: OVERVIEW -->
+        <div id="tab-overview" class="dashboard-tab-panel">
+          <div class="metrics-grid">
+            <div class="metric-card tilt-card-3d">
+              <div class="metric-icon-box metric-primary"><i class="fa-solid fa-users"></i></div>
+              <div class="metric-info">
+                <h3 id="metric-total-employees">0</h3>
+                <p>Total Team Members</p>
+              </div>
+            </div>
+
+            <div class="metric-card tilt-card-3d">
+              <div class="metric-icon-box metric-secondary"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="metric-info">
+                <h3 id="metric-active-jobs">0</h3>
+                <p>Active Job Openings</p>
+              </div>
+            </div>
+
+            <div class="metric-card tilt-card-3d">
+              <div class="metric-icon-box metric-warning"><i class="fa-solid fa-file-lines"></i></div>
+              <div class="metric-info">
+                <h3 id="metric-total-applications">0</h3>
+                <p>Received Applications</p>
+              </div>
+            </div>
+
+            <div class="metric-card tilt-card-3d">
+              <div class="metric-icon-box metric-success"><i class="fa-solid fa-user-check"></i></div>
+              <div class="metric-info">
+                <h3 id="metric-hired-count">0</h3>
+                <p>Hired Candidates</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 32px;">
+            <div class="glass-card tilt-card-3d" style="padding: 24px;">
+              <div class="panel-header" style="margin-bottom: 16px;">
+                <h3 class="panel-title">Recent Candidate Applications</h3>
+                <button class="btn btn-outline btn-sm" onclick="document.querySelector('.sidebar-link[data-tab=\'applications\']').click()">View All</button>
+              </div>
+              <div class="table-container" style="margin-bottom: 0;">
+                <table class="custom-table">
+                  <thead>
+                    <tr>
+                      <th>Candidate</th>
+                      <th>Target Role</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="overview-recent-apps"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="glass-card tilt-card-3d" style="padding: 24px;">
+              <h3 class="panel-title" style="margin-bottom: 16px;">System Operations</h3>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                  <span style="color: var(--text-muted);">Shortlisted:</span>
+                  <span id="metric-shortlisted-count" style="font-weight: 700; color: var(--primary);">0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                  <span style="color: var(--text-muted);">Database:</span>
+                  <span style="font-weight: 700; color: var(--success);"><i class="fa-solid fa-circle-check"></i> LocalStorage Synced</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                  <span style="color: var(--text-muted);">Pages Online:</span>
+                  <span style="font-weight: 700; color: #fff;">10 Fully Linked</span>
+                </div>
+              </div>
+              <div style="margin-top: 24px;">
+                <a href="apply.html" class="btn btn-secondary btn-sm" style="width: 100%;">
+                  <i class="fa-solid fa-paper-plane"></i> Test Public Application
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D CARDS GALLERY OF SYSTEM MODULES -->
+          <section class="gallery-3d-section" style="padding: 40px 0;">
+            <div class="section-header" style="margin-bottom: 24px;">
+              <div class="badge-pill"><i class="fa-solid fa-cube"></i> <span>System Nodes</span></div>
+              <h2 class="section-title" style="font-size: 1.8rem;">Internal Subsystems in 3D</h2>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 14px; margin-bottom: 16px;">
+              <button id="gallery-prev-btn" class="scroll-arrow-btn"><i class="fa-solid fa-arrow-left"></i></button>
+              <button id="gallery-next-btn" class="scroll-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="gallery-3d-viewport" style="height: 360px;">
+              <div id="gallery-3d-stage" class="gallery-3d-stage">
+                <div class="gallery-3d-card" style="height: 320px;">
+                  <span class="job-badge-tag badge-engineering">Module 01</span>
+                  <h3 style="color: #fff; margin-top: 10px;">Personnel Ledger</h3>
+                  <p style="font-size: 0.88rem; color: var(--text-muted);">Real-time employee registry with department designations and role management.</p>
+                  <div style="color: var(--primary); font-size: 0.8rem;"><i class="fa-solid fa-users"></i> Active</div>
+                </div>
+                <div class="gallery-3d-card" style="height: 320px;">
+                  <span class="job-badge-tag badge-ai">Module 02</span>
+                  <h3 style="color: #fff; margin-top: 10px;">Vacancies Publisher</h3>
+                  <p style="font-size: 0.88rem; color: var(--text-muted);">Instantly publishes and synchronizes career openings to the public website.</p>
+                  <div style="color: var(--secondary); font-size: 0.8rem;"><i class="fa-solid fa-briefcase"></i> Published</div>
+                </div>
+                <div class="gallery-3d-card" style="height: 320px;">
+                  <span class="job-badge-tag badge-design">Module 03</span>
+                  <h3 style="color: #fff; margin-top: 10px;">Talent Screener</h3>
+                  <p style="font-size: 0.88rem; color: var(--text-muted);">Review candidates, examine CV filenames, and update status in one click.</p>
+                  <div style="color: var(--accent); font-size: 0.8rem;"><i class="fa-solid fa-filter"></i> Interactive</div>
+                </div>
+                <div class="gallery-3d-card" style="height: 320px;">
+                  <span class="job-badge-tag badge-qa">Module 04</span>
+                  <h3 style="color: #fff; margin-top: 10px;">Analytics & Metrics</h3>
+                  <p style="font-size: 0.88rem; color: var(--text-muted);">Live counters tracking total hires, shortlisted applicants, and conversion rates.</p>
+                  <div style="color: var(--success); font-size: 0.8rem;"><i class="fa-solid fa-chart-line"></i> Real-Time</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STACKING CARDS: GOVERNANCE PROTOCOLS -->
+          <section class="stacking-cards-section" style="padding: 40px 0;">
+            <div class="section-header" style="margin-bottom: 24px;">
+              <div class="badge-pill"><i class="fa-solid fa-layer-group"></i> <span>Governance</span></div>
+              <h2 class="section-title" style="font-size: 1.8rem;">Admin Governance Protocols</h2>
+            </div>
+
+            <div class="stacking-cards-list">
+              <div class="stacked-card-item">
+                <span class="badge-pill" style="color: var(--primary);">Protocol 01</span>
+                <h3 style="font-size: 1.5rem; color: #fff; margin: 8px 0;">Candidate Data Confidentiality</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  All uploaded applicant credentials and contact numbers are stored strictly within client-side encrypted local buffers.
+                </p>
+              </div>
+
+              <div class="stacked-card-item">
+                <span class="badge-pill" style="color: var(--secondary);">Protocol 02</span>
+                <h3 style="font-size: 1.5rem; color: #fff; margin: 8px 0;">Instant Public Synchronization</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  Adding or deleting a job opening in this portal immediately reflects on the live public Jobs page without server rebuilds.
+                </p>
+              </div>
+
+              <div class="stacked-card-item">
+                <span class="badge-pill" style="color: var(--accent);">Protocol 03</span>
+                <h3 style="font-size: 1.5rem; color: #fff; margin: 8px 0;">Auditable Status Transitions</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  Moving applicants between Shortlisted, Interviewed, and Hired states logs timestamped transitions for talent reporting.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- TAB 2: EMPLOYEES DIRECTORY -->
+        <div id="tab-employees" class="dashboard-tab-panel" style="display: none;">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Employee Directory</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Manage in-house engineers, team leaders, and personnel records.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="document.getElementById('btn-open-add-employee').click()">
+              <i class="fa-solid fa-user-plus"></i> Add Employee
+            </button>
+          </div>
+
+          <div class="table-container">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Designation / Role</th>
+                  <th>Department</th>
+                  <th>Contact Info</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="employees-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 3: JOB VACANCIES -->
+        <div id="tab-jobs" class="dashboard-tab-panel" style="display: none;">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Published Job Vacancies</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Publish, edit, or remove career opportunities shown across the website.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="document.getElementById('btn-open-post-job').click()">
+              <i class="fa-solid fa-plus"></i> Post New Job
+            </button>
+          </div>
+
+          <div class="table-container">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Job Title & ID</th>
+                  <th>Department</th>
+                  <th>Work Type</th>
+                  <th>Salary Range</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="jobs-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 4: CANDIDATE PIPELINE -->
+        <div id="tab-applications" class="dashboard-tab-panel" style="display: none;">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Candidate Recruitment Pipeline</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Screen applicants, update status (Shortlisted, Interviewed, Hired, Rejected).</p>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Applicant Name</th>
+                  <th>Applied For</th>
+                  <th>Experience</th>
+                  <th>CV / Resume</th>
+                  <th>Recruitment Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="applications-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD EMPLOYEE -->
+  <div id="modal-add-employee" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-plus" style="color: var(--primary); margin-right: 8px;"></i> Add New Employee</h3>
+        <button id="btn-close-emp-modal" class="modal-close-btn">&times;</button>
+      </div>
+      <form id="form-add-employee">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="emp-name">Full Name *</label>
+            <input type="text" id="emp-name" class="form-input" placeholder="e.g. Liam Foster" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="emp-role">Designation / Role *</label>
+              <input type="text" id="emp-role" class="form-input" placeholder="e.g. Senior TypeScript Developer" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="emp-department">Department *</label>
+              <select id="emp-department" class="form-select" required>
+                <option value="Engineering">Engineering</option>
+                <option value="AI & ML">AI & ML</option>
+                <option value="Design">Design</option>
+                <option value="DevOps & Cloud">DevOps & Cloud</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="HR & Ops">HR & Ops</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="emp-email">Email Address *</label>
+              <input type="email" id="emp-email" class="form-input" placeholder="liam@logix.dev" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="emp-phone">Phone Number</label>
+              <input type="tel" id="emp-phone" class="form-input" placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="emp-salary">Annual Salary</label>
+            <input type="text" id="emp-salary" class="form-input" placeholder="e.g. $135,000">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('modal-add-employee').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">Save Employee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: POST JOB VACANCY -->
+  <div id="modal-post-job" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-briefcase" style="color: var(--secondary); margin-right: 8px;"></i> Post New Job Opening</h3>
+        <button id="btn-close-job-modal" class="modal-close-btn">&times;</button>
+      </div>
+      <form id="form-post-job">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="job-title-input">Job Title *</label>
+            <input type="text" id="job-title-input" class="form-input" placeholder="e.g. Lead Cloud Security Engineer" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="job-dept-input">Department *</label>
+              <select id="job-dept-input" class="form-select" required>
+                <option value="Engineering">Engineering</option>
+                <option value="AI & ML">AI & Machine Learning</option>
+                <option value="Design">UI/UX Design</option>
+                <option value="DevOps & Cloud">DevOps & Cloud</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job-type-input">Employment Type *</label>
+              <select id="job-type-input" class="form-select" required>
+                <option value="Full-time">Full-time</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Contract">Contract</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="job-salary-input">Salary Range</label>
+              <input type="text" id="job-salary-input" class="form-input" placeholder="e.g. $120k - $150k">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="job-location-input">Location</label>
+              <input type="text" id="job-location-input" class="form-input" placeholder="e.g. San Francisco or Remote">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="job-exp-input">Experience Requirement</label>
+            <input type="text" id="job-exp-input" class="form-input" placeholder="e.g. 4+ Years Experience">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="job-desc-input">Job Description *</label>
+            <textarea id="job-desc-input" class="form-textarea" placeholder="Describe the role, responsibilities, and qualifications..." required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('modal-post-job').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">Publish Job</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/jobs-data.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tbody = document.getElementById("overview-recent-apps");
+      if (tbody) {
+        const apps = LogixStore.getApplications().slice(0, 4);
+        tbody.innerHTML = apps.map(a => `
+          <tr>
+            <td>
+              <strong style="color: #fff;">${a.applicantName}</strong>
+              <div style="font-size: 0.75rem; color: var(--text-dim);">${a.email}</div>
+            </td>
+            <td>${a.jobTitle}</td>
+            <td><span class="status-badge status-shortlisted">${a.status}</span></td>
+          </tr>
+        `).join("");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | LOGIX Software House</title>
+  <meta name="description" content="Get in touch with LOGIX software engineering leads for product scoping, squad augmentation, or technical partnerships.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- 1. WEBSITE PRELOADER -->
+  <div class="site-preloader">
+    <div class="preloader-center-box">
+      <div class="preloader-cube"><i class="fa-solid fa-cube"></i></div>
+      <div class="preloader-counter">0%</div>
+      <div class="preloader-progress-bar"><div class="preloader-progress-fill"></div></div>
+      <div style="margin-top: 14px; font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase;">
+        Opening Contact & Scoping Channel
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CUSTOM MAGNETIC CURSOR -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- 3. PAGE TRANSITION CURTAIN -->
+  <div class="page-transition-curtain"></div>
+
+  <!-- 4. FULLSCREEN MENU OVERLAY -->
+  <div id="fullscreen-menu-overlay" class="fullscreen-nav-overlay">
+    <button id="btn-close-fs-menu" class="fs-menu-close-btn" aria-label="Close Fullscreen Menu">&times;</button>
+    <div class="container" style="text-align: center;">
+      <div class="badge-pill" style="margin-bottom: 24px;">Navigation Matrix</div>
+      <ul class="fs-nav-links-list">
+        <li class="fs-nav-link-item"><a href="index.html">01. Home</a></li>
+        <li class="fs-nav-link-item"><a href="about.html">02. About Us</a></li>
+        <li class="fs-nav-link-item"><a href="services.html">03. Services & Pricing</a></li>
+        <li class="fs-nav-link-item"><a href="team.html">04. Our Team</a></li>
+        <li class="fs-nav-link-item"><a href="careers.html">05. Careers & Perks</a></li>
+        <li class="fs-nav-link-item"><a href="jobs.html">06. Open Vacancies</a></li>
+        <li class="fs-nav-link-item"><a href="apply.html">07. Apply for Job</a></li>
+        <li class="fs-nav-link-item"><a href="contact.html">08. Contact Us</a></li>
+        <li class="fs-nav-link-item"><a href="dashboard.html" style="color: var(--secondary);">09. Admin Dashboard</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ambient Mouse Glow -->
+  <div class="interactive-mouse-aura"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+        <span>LOGIX<span style="color: var(--primary);">.</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="jobs.html" class="nav-link">Jobs</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-group">
+        <button id="btn-open-fullscreen-menu" class="btn btn-secondary btn-sm" title="Toggle Fullscreen Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+          <span>Menu</span>
+        </button>
+        <a href="dashboard.html" class="dashboard-pill-btn" title="Open Admin Portal">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Admin Portal</span>
+        </a>
+        <a href="apply.html" class="btn btn-primary btn-sm">
+          <span>Join Our Team</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer">
+    <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="about.html" class="mobile-nav-link"><span>About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="team.html" class="mobile-nav-link"><span>Our Team</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="careers.html" class="mobile-nav-link"><span>Careers</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="jobs.html" class="mobile-nav-link"><span>Open Vacancies</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="apply.html" class="mobile-nav-link"><span>Apply for Job</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html" class="mobile-nav-link active"><span>Contact Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="dashboard.html" class="mobile-nav-link" style="color: var(--secondary);"><span>Admin Dashboard</span> <i class="fa-solid fa-gauge-high"></i></a>
+  </div>
+
+  <main>
+    <!-- FULL SCREEN TEXT ANIMATION HERO + SVG MORPH -->
+    <section class="fullscreen-text-hero">
+      <svg class="svg-morph-canvas" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <path class="morph-path-animated" d="M231.2,148.9C278.4,198.8,284.8,286.2,251.2,348.6C217.6,411,144,448.4,85.2,427.6C26.4,406.8,-17.6,327.8,3.2,263.6C24,199.4,109.6,150,174.4,117.2C239.2,84.4,184,99,231.2,148.9Z"></path>
+      </svg>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="breadcrumb" style="margin-bottom: 24px;">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+          <span>Contact Us</span>
+        </div>
+
+        <h1 class="kinetic-headline">
+          <span class="split-text-target">START A PROJECT</span><br>
+          <span class="gradient-text split-text-target">CONNECT WITH ARCHITECTS</span><br>
+          <span id="kinetic-flip-word" class="kinetic-word-flip">24-HOUR RESPONSE</span>
+        </h1>
+
+        <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); max-width: 760px; margin: 0 auto 36px; line-height: 1.7;">
+          Have a high-stakes web application, AI system, or dedicated engineering squad to commission? Our solutions leads are ready to draft an architectural scoping proposal.
+        </p>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#contact-form-section" class="btn btn-primary btn-lg">
+            <span>Send Us an Inquiry</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="tel:+15550192831" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (555) 019-2831</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFINITE MARQUEE -->
+    <section class="infinite-marquee-section">
+      <div class="marquee-row">
+        <div class="marquee-group">
+          <span class="marquee-pill"><i class="fa-solid fa-clock" style="color: var(--secondary);"></i> 24-Hour Guaranteed Turnaround</span>
+          <span class="marquee-pill"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> Mutual Non-Disclosure Agreement</span>
+          <span class="marquee-pill"><i class="fa-solid fa-handshake" style="color: var(--accent);"></i> Direct Principal Architect Call</span>
+          <span class="marquee-pill"><i class="fa-solid fa-sack-dollar" style="color: var(--success);"></i> Fixed Milestone Capped Pricing</span>
+          <span class="marquee-pill"><i class="fa-solid fa-file-contract" style="color: var(--warning);"></i> 100% IP Code Ownership</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-pill"><i class="fa-solid fa-clock" style="color: var(--secondary);"></i> 24-Hour Guaranteed Turnaround</span>
+          <span class="marquee-pill"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> Mutual Non-Disclosure Agreement</span>
+          <span class="marquee-pill"><i class="fa-solid fa-handshake" style="color: var(--accent);"></i> Direct Principal Architect Call</span>
+          <span class="marquee-pill"><i class="fa-solid fa-sack-dollar" style="color: var(--success);"></i> Fixed Milestone Capped Pricing</span>
+          <span class="marquee-pill"><i class="fa-solid fa-file-contract" style="color: var(--warning);"></i> 100% IP Code Ownership</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM & OFFICE DETAILS -->
+    <section id="contact-form-section" class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: start;">
+          
+          <div>
+            <div class="glass-card tilt-card-3d" style="margin-bottom: 24px;">
+              <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: #fff;">Direct Engineering Contact</h3>
+
+              <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.2rem; flex-shrink: 0;">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Silicon Valley Headquarters</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                      100 Innovation Boulevard, Suite 500<br>
+                      San Francisco, CA 94105, United States
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(6,182,212,0.12); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.2rem; flex-shrink: 0;">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Direct Email Inquiries</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                      Client Projects: <a href="mailto:contact@logix.dev" style="color: var(--secondary);">contact@logix.dev</a><br>
+                      Recruitment: <a href="mailto:careers@logix.dev" style="color: var(--secondary);">careers@logix.dev</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: rgba(16,185,129,0.12); display: flex; align-items: center; justify-content: center; color: var(--success); font-size: 1.2rem; flex-shrink: 0;">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Direct Phone Line</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                      +1 (555) 019-2831<br>
+                      <span style="font-size: 0.8rem; color: var(--text-dim);">Mon - Fri, 9:00 AM - 6:00 PM PST</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee Card -->
+            <div class="glass-card tilt-card-3d" style="border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.04);">
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                <i class="fa-solid fa-shield-halved" style="color: var(--secondary); font-size: 1.3rem;"></i>
+                <h4 style="font-size: 1.1rem; color: #fff;">Guaranteed 24-Hour Scoping</h4>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                Every inquiry is reviewed directly by a Senior Solutions Architect. We return a written feasibility outline within one business day.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Form with 3D Tilt -->
+          <div class="glass-card tilt-card-3d" style="padding: 40px; border-color: rgba(99,102,241,0.35);">
+            <h3 style="font-size: 1.4rem; margin-bottom: 8px; color: #fff;">Send Us a Message</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
+              Fill out the form below to get started on your software vision.
+            </p>
+
+            <form id="contact-inquiry-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Your Name *</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email Address *</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="john@company.com" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                <div class="form-group">
+                  <label class="form-label" for="contact-phone">Phone / WhatsApp</label>
+                  <input type="tel" id="contact-phone" class="form-input" placeholder="+1 (555) 000-0000">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-service">Interested Service</label>
+                  <select id="contact-service" class="form-select">
+                    <option value="Full-Stack Web App">Full-Stack Web App (React / Next.js)</option>
+                    <option value="AI Solutions & RAG">AI Solutions & Agentic RAG</option>
+                    <option value="Mobile App Development">Mobile App (iOS & Android)</option>
+                    <option value="UI/UX Design Systems">UI/UX Design System</option>
+                    <option value="Cloud & DevOps">Cloud & DevOps Migration</option>
+                    <option value="Dedicated Squad">Dedicated Engineering Squad</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="Project overview, estimated timeline, or inquiry">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Project Details / Message *</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Tell us about your project goals, required tech stack, estimated budget, and target launch date..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLLYTELLING: CLIENT SPRINT JOURNEY -->
+    <section class="scrollytelling-wrapper">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-handshake"></i> <span>Client Onboarding</span></div>
+          <h2 class="section-title">From First Contact to Sprint 1 Launch</h2>
+          <p class="section-subtitle">A transparent timeline showing how rapidly we mobilize engineering squads.</p>
+        </div>
+
+        <div class="scrolly-grid">
+          <div class="scrolly-sticky-box">
+            <span id="scrolly-active-badge" class="badge-pill" style="margin-bottom: 12px;">Day 01</span>
+            <h3 id="scrolly-active-title" style="font-size: 1.8rem; color: #fff; margin-bottom: 12px;">Initial Architecture Scoping</h3>
+            <p id="scrolly-active-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;">
+              A 45-minute video call with our CTO and Lead Architect to audit technical requirements and sign mutual NDAs.
+            </p>
+            <div id="scrolly-active-diagram" style="background: rgba(7,9,19,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 12px;"><i class="fa-solid fa-file-contract"></i></div>
+              <div style="font-weight: 700; color: #fff; font-size: 1.05rem;">Mutual NDA & Architecture Scoping</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">Day 1 Immediate Action</div>
+            </div>
+          </div>
+
+          <div class="scrolly-steps-container">
+            <div class="scrolly-step-card active-step"
+                 data-badge="Day 01"
+                 data-title="Initial Architecture Scoping"
+                 data-desc="A 45-minute video call with our CTO and Lead Architect to audit technical requirements and sign mutual NDAs."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--primary); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-file-contract'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Mutual NDA & Architecture Scoping&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Day 1 Immediate Action&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">Day 1</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Scoping & Confidentiality</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Sign mutual non-disclosure agreements and map technical expectations directly with our senior leads.
+              </p>
+            </div>
+
+            <div class="scrolly-step-card"
+                 data-badge="Day 03"
+                 data-title="Detailed Milestone & Budget Proposal"
+                 data-desc="Receive an itemized breakdown of sprint deliverables, technology stacks, team assignments, and fixed budget caps."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--secondary); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-list-check'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Fixed Milestone Budget Proposal&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Zero Hidden Costs&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 8px;">Day 3</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Transparent Proposal</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                We provide a written blueprint with sprint deliverables, architecture diagrams, and fixed price commitments.
+              </p>
+            </div>
+
+            <div class="scrolly-step-card"
+                 data-badge="Day 07"
+                 data-title="Sprint 1 Kickoff & Repository Access"
+                 data-desc="Your dedicated squad initiates the project repository, sets up automated CI/CD pipelines, and invites your team to shared channels."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--success); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-play'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Sprint 1 Live In Production&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Full GitHub & Slack Access&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--success); margin-bottom: 8px;">Day 7</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Active Sprint 1 Launch</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Within one week of initial contact, your engineering squad is actively writing code and committing to your repositories.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACKING CARDS: CLIENT GUARANTEES -->
+    <section class="stacking-cards-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-layer-group"></i> <span>Client Covenant</span></div>
+          <h2 class="section-title">Our 4 Core Client Guarantees</h2>
+        </div>
+
+        <div class="stacking-cards-list">
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--primary);">Guarantee 01</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">100% Intellectual Property Ownership</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              Every line of code, design asset, and cloud configuration is your exclusive property from day one. Zero vendor lock-in.
+            </p>
+          </div>
+
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--secondary);">Guarantee 02</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Fixed Milestone Price Protection</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              For fixed-scope projects, we guarantee deliverables within the agreed budget cap. Any scope overage is on us.
+            </p>
+          </div>
+
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--accent);">Guarantee 03</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Automated Test Suite Included</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              We never ship untested code. Automated unit, integration, and E2E Playwright tests accompany every deliverable.
+            </p>
+          </div>
+
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--success);">Guarantee 04</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Dedicated Slack & Direct Tech Lead Access</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              No middle-manager telephone game. You communicate directly with the senior developers writing your software.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D CARD GALLERY: GLOBAL HUBS -->
+    <section class="gallery-3d-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-cube"></i> <span>Global Footprint</span></div>
+          <h2 class="section-title">Worldwide Engineering Hubs</h2>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 20px;">
+          <button id="gallery-prev-btn" class="scroll-arrow-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="gallery-next-btn" class="scroll-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="gallery-3d-viewport">
+          <div id="gallery-3d-stage" class="gallery-3d-stage">
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-engineering">HQ</span>
+              <h3 style="color: #fff; margin-top: 10px;">San Francisco, CA</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">100 Innovation Blvd, Suite 500. Core architecture & research.</p>
+              <div style="color: var(--primary); font-size: 0.8rem;"><i class="fa-solid fa-building"></i> Americas HQ</div>
+            </div>
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-ai">Hub</span>
+              <h3 style="color: #fff; margin-top: 10px;">Austin, TX</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">UI/UX Design Systems & mobile application engineering.</p>
+              <div style="color: var(--secondary); font-size: 0.8rem;"><i class="fa-solid fa-palette"></i> Design Center</div>
+            </div>
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-devops">Hub</span>
+              <h3 style="color: #fff; margin-top: 10px;">New York, NY</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Enterprise AI solutions, data pipelines, and fintech software.</p>
+              <div style="color: var(--accent); font-size: 0.8rem;"><i class="fa-solid fa-brain"></i> AI Division</div>
+            </div>
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-qa">Hub</span>
+              <h3 style="color: #fff; margin-top: 10px;">London, UK</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">European operations, GDPR compliance, and cloud infrastructure.</p>
+              <div style="color: var(--success); font-size: 0.8rem;"><i class="fa-solid fa-globe"></i> EMEA Office</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE REVEAL ANIMATION SECTION -->
+    <section class="section" style="background: rgba(13, 18, 36, 0.4); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-eye"></i> <span>Client Trust</span></div>
+          <h2 class="section-title">Built For Ambitious Leaders</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px;">
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="Executive Meeting" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 6px;">Strategic Technical Alignment</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">We bridge the gap between executive business goals and code architecture.</p>
+            </div>
+          </div>
+
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="Modern Architecture" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 6px;">Resilient Enterprise Scalability</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">Architectures that effortlessly absorb explosive growth and traffic spikes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <div>&copy; 2026 LOGIX Software House. All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jobs-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("contact-inquiry-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("contact-name").value;
+      window.showToast(`Thank you, ${name}! Your inquiry has been sent. A solutions lead will contact you shortly.`, "success");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

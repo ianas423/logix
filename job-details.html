@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details | LOGIX Careers</title>
+  <meta name="description" content="Read full responsibilities, technical requirements, benefits, and salary information for this position at LOGIX.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- 1. WEBSITE PRELOADER -->
+  <div class="site-preloader">
+    <div class="preloader-center-box">
+      <div class="preloader-cube"><i class="fa-solid fa-cube"></i></div>
+      <div class="preloader-counter">0%</div>
+      <div class="preloader-progress-bar"><div class="preloader-progress-fill"></div></div>
+      <div style="margin-top: 14px; font-size: 0.85rem; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase;">
+        Loading Role Specification
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CUSTOM MAGNETIC CURSOR -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- 3. PAGE TRANSITION CURTAIN -->
+  <div class="page-transition-curtain"></div>
+
+  <!-- 4. FULLSCREEN MENU OVERLAY -->
+  <div id="fullscreen-menu-overlay" class="fullscreen-nav-overlay">
+    <button id="btn-close-fs-menu" class="fs-menu-close-btn" aria-label="Close Fullscreen Menu">&times;</button>
+    <div class="container" style="text-align: center;">
+      <div class="badge-pill" style="margin-bottom: 24px;">Navigation Matrix</div>
+      <ul class="fs-nav-links-list">
+        <li class="fs-nav-link-item"><a href="index.html">01. Home</a></li>
+        <li class="fs-nav-link-item"><a href="about.html">02. About Us</a></li>
+        <li class="fs-nav-link-item"><a href="services.html">03. Services & Pricing</a></li>
+        <li class="fs-nav-link-item"><a href="team.html">04. Our Team</a></li>
+        <li class="fs-nav-link-item"><a href="careers.html">05. Careers & Perks</a></li>
+        <li class="fs-nav-link-item"><a href="jobs.html">06. Open Vacancies</a></li>
+        <li class="fs-nav-link-item"><a href="apply.html">07. Apply for Job</a></li>
+        <li class="fs-nav-link-item"><a href="contact.html">08. Contact Us</a></li>
+        <li class="fs-nav-link-item"><a href="dashboard.html" style="color: var(--secondary);">09. Admin Dashboard</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ambient Mouse Glow -->
+  <div class="interactive-mouse-aura"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-cube"></i></div>
+        <span>LOGIX<span style="color: var(--primary);">.</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="jobs.html" class="nav-link active">Jobs</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-group">
+        <button id="btn-open-fullscreen-menu" class="btn btn-secondary btn-sm" title="Toggle Fullscreen Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+          <span>Menu</span>
+        </button>
+        <a href="dashboard.html" class="dashboard-pill-btn" title="Open Admin Portal">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Admin Portal</span>
+        </a>
+        <a href="apply.html" class="btn btn-primary btn-sm">
+          <span>Apply Now</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer">
+    <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="about.html" class="mobile-nav-link"><span>About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="team.html" class="mobile-nav-link"><span>Our Team</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="careers.html" class="mobile-nav-link"><span>Careers</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="jobs.html" class="mobile-nav-link active"><span>Open Vacancies</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="apply.html" class="mobile-nav-link"><span>Apply for Job</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html" class="mobile-nav-link"><span>Contact Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="dashboard.html" class="mobile-nav-link" style="color: var(--secondary);"><span>Admin Dashboard</span> <i class="fa-solid fa-gauge-high"></i></a>
+  </div>
+
+  <main>
+    <!-- FULL SCREEN TEXT ANIMATION HERO + SVG MORPH -->
+    <section class="fullscreen-text-hero">
+      <svg class="svg-morph-canvas" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <path class="morph-path-animated" d="M231.2,148.9C278.4,198.8,284.8,286.2,251.2,348.6C217.6,411,144,448.4,85.2,427.6C26.4,406.8,-17.6,327.8,3.2,263.6C24,199.4,109.6,150,174.4,117.2C239.2,84.4,184,99,231.2,148.9Z"></path>
+      </svg>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="breadcrumb" style="margin-bottom: 24px;">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+          <a href="jobs.html">Jobs</a>
+          <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+          <span id="job-breadcrumb-title">Role Details</span>
+        </div>
+
+        <h1 class="kinetic-headline">
+          <span id="job-main-title" class="split-text-target">Loading Role...</span><br>
+          <span class="gradient-text split-text-target">ENGINEER AT LOGIX</span>
+        </h1>
+
+        <p id="job-full-description" style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); max-width: 760px; margin: 0 auto 36px; line-height: 1.7;">
+          Loading role description...
+        </p>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a id="apply-button-hero" href="apply.html" class="btn btn-primary btn-lg">
+            <span>Apply for this Position</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="jobs.html" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Browse Other Openings</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFINITE MARQUEE OF TECH STACK & REQUIREMENTS -->
+    <section class="infinite-marquee-section">
+      <div class="marquee-row">
+        <div class="marquee-group">
+          <span class="marquee-pill"><i class="fa-solid fa-sack-dollar" style="color: var(--success);"></i> Top-Tier Salary & Equity</span>
+          <span class="marquee-pill"><i class="fa-solid fa-laptop" style="color: var(--primary);"></i> M3 Max Workstation Provided</span>
+          <span class="marquee-pill"><i class="fa-solid fa-graduation-cap" style="color: var(--secondary);"></i> $2,500 Learning Budget</span>
+          <span class="marquee-pill"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i> 100% Medical Coverage</span>
+          <span class="marquee-pill"><i class="fa-solid fa-house-laptop" style="color: var(--warning);"></i> Flexible Hybrid & Remote</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-pill"><i class="fa-solid fa-sack-dollar" style="color: var(--success);"></i> Top-Tier Salary & Equity</span>
+          <span class="marquee-pill"><i class="fa-solid fa-laptop" style="color: var(--primary);"></i> M3 Max Workstation Provided</span>
+          <span class="marquee-pill"><i class="fa-solid fa-graduation-cap" style="color: var(--secondary);"></i> $2,500 Learning Budget</span>
+          <span class="marquee-pill"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i> 100% Medical Coverage</span>
+          <span class="marquee-pill"><i class="fa-solid fa-house-laptop" style="color: var(--warning);"></i> Flexible Hybrid & Remote</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOB SPECIFICATION & APPLICATION DETAILS -->
+    <section class="section">
+      <div class="container">
+        
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
+          <div>
+            <!-- Header Card with 3D Tilt -->
+            <div id="job-header-card" class="glass-card tilt-card-3d" style="margin-bottom: 32px;">
+              <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: center;">
+                <span id="job-dept-badge" class="job-badge-tag badge-engineering">Engineering</span>
+                <span id="job-type-badge" class="badge-pill" style="margin: 0; padding: 2px 10px; font-size: 0.75rem;">Full-time</span>
+              </div>
+              
+              <div class="job-meta-list" style="margin-bottom: 24px;">
+                <div class="job-meta-item"><i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> <span id="job-meta-location">San Francisco, CA</span></div>
+                <div class="job-meta-item"><i class="fa-solid fa-sack-dollar" style="color: var(--success);"></i> <span id="job-meta-salary">$130k - $160k</span></div>
+                <div class="job-meta-item"><i class="fa-solid fa-briefcase" style="color: var(--accent);"></i> <span id="job-meta-exp">5+ Years Experience</span></div>
+                <div class="job-meta-item"><i class="fa-regular fa-calendar" style="color: var(--secondary);"></i> <span id="job-meta-date">Posted Recently</span></div>
+              </div>
+
+              <div id="job-tags-list" class="job-tags-container"></div>
+            </div>
+
+            <!-- Key Responsibilities -->
+            <div class="glass-card tilt-card-3d" style="margin-bottom: 24px;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 16px; color: #fff;">Key Responsibilities</h3>
+              <ul id="job-responsibilities-list" class="service-features-list"></ul>
+            </div>
+
+            <!-- Requirements -->
+            <div class="glass-card tilt-card-3d" style="margin-bottom: 24px;">
+              <h3 style="font-size: 1.3rem; margin-bottom: 16px; color: #fff;">Candidate Requirements</h3>
+              <ul id="job-requirements-list" class="service-features-list"></ul>
+            </div>
+
+            <!-- Benefits -->
+            <div class="glass-card tilt-card-3d">
+              <h3 style="font-size: 1.3rem; margin-bottom: 16px; color: #fff;">What We Offer</h3>
+              <ul id="job-benefits-list" class="service-features-list"></ul>
+            </div>
+          </div>
+
+          <!-- Sticky Sidebar Box -->
+          <div style="position: sticky; top: 120px;">
+            <div class="glass-card" style="border-color: rgba(99,102,241,0.35);">
+              <h3 style="font-size: 1.25rem; margin-bottom: 14px; color: #fff;">Ready to Apply?</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.6;">
+                Submit your CV directly through our streamlined application form.
+              </p>
+
+              <a id="apply-button-link" href="apply.html" class="btn btn-primary" style="width: 100%; margin-bottom: 14px;">
+                <span>Apply for this Job</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="jobs.html" class="btn btn-secondary" style="width: 100%;">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to All Openings</span>
+              </a>
+
+              <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06);">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+                  <i class="fa-solid fa-bolt" style="color: var(--secondary);"></i>
+                  <span>Response time: Within 48 hours</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i>
+                  <span>Direct contact with Tech Lead</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCROLLYTELLING: A DAY IN THE LIFE -->
+    <section class="scrollytelling-wrapper">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-clock"></i> <span>Daily Rhythm</span></div>
+          <h2 class="section-title">A Day in the Life of a LOGIX Engineer</h2>
+          <p class="section-subtitle">Scroll down to see how we protect focus and engineer solutions daily.</p>
+        </div>
+
+        <div class="scrolly-grid">
+          <div class="scrolly-sticky-box">
+            <span id="scrolly-active-badge" class="badge-pill" style="margin-bottom: 12px;">Morning</span>
+            <h3 id="scrolly-active-title" style="font-size: 1.8rem; color: #fff; margin-bottom: 12px;">Deep Work & Code Crafting</h3>
+            <p id="scrolly-active-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;">
+              Mornings are meeting-free. Focus on solving hard technical problems, writing strongly-typed logic, and drafting RFCs.
+            </p>
+            <div id="scrolly-active-diagram" style="background: rgba(7,9,19,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+              <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 12px;"><i class="fa-solid fa-code"></i></div>
+              <div style="font-weight: 700; color: #fff; font-size: 1.05rem;">Meeting-Free Morning Window</div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">Uninterrupted Flow State</div>
+            </div>
+          </div>
+
+          <div class="scrolly-steps-container">
+            <div class="scrolly-step-card active-step"
+                 data-badge="Morning"
+                 data-title="Deep Work & Code Crafting"
+                 data-desc="Mornings are meeting-free. Focus on solving hard technical problems, writing strongly-typed logic, and drafting RFCs."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--primary); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-code'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Meeting-Free Morning Window&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Uninterrupted Flow State&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">09:00 AM</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Uninterrupted Flow Time</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Architecting core schemas and implementing business logic while energy is highest.
+              </p>
+            </div>
+
+            <div class="scrolly-step-card"
+                 data-badge="Midday"
+                 data-title="Asynchronous Standup & Code Reviews"
+                 data-desc="15-minute alignment with your squad to review pull requests, unblock questions, and verify test coverage."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--secondary); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-code-pull-request'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Peer Review & CI Verification&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Shared Code Ownership&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 8px;">12:00 PM</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Squad Sync & PR Reviews</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Provide constructive feedback on peer branches and ensure code meets our strict architecture guidelines.
+              </p>
+            </div>
+
+            <div class="scrolly-step-card"
+                 data-badge="Afternoon"
+                 data-title="Deployments & Research Time"
+                 data-desc="Deploy verified features to staging and production via automated GitHub Actions, then spend an hour researching new tech."
+                 data-diagram="&lt;div style='font-size: 2.5rem; color: var(--success); margin-bottom: 12px;'&gt;&lt;i class='fa-solid fa-rocket'&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style='font-weight: 700; color: #fff; font-size: 1.05rem;'&gt;Automated Production Release&lt;/div&gt;&lt;div style='font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;'&gt;Zero-Downtime Deployment&lt;/div&gt;">
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--success); margin-bottom: 8px;">03:30 PM</div>
+              <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Staging Release & Innovation</h3>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                Watch automated test pipelines pass green and merge your contributions to production.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACKING CARDS: CAREER LADDER -->
+    <section class="stacking-cards-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-layer-group"></i> <span>Career Growth</span></div>
+          <h2 class="section-title">The Engineering Ladder at LOGIX</h2>
+          <p class="section-subtitle">We provide an explicit, merit-based career path for every engineer.</p>
+        </div>
+
+        <div class="stacking-cards-list">
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--primary);">Level 01</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Software Engineer</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              Focuses on shipping high-quality components, implementing typed REST/GraphQL APIs, and writing automated unit and E2E tests.
+            </p>
+          </div>
+
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--secondary);">Level 02</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Senior Engineer</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              Owns sub-system architecture, leads complex database schema migrations, conducts rigorous peer code reviews, and mentors juniors.
+            </p>
+          </div>
+
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--accent);">Level 03</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Staff / Lead Architect</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              Designs multi-cloud infrastructure, drafts company-wide RFC standards, solves difficult distributed systems bottlenecks, and interfaces with client leadership.
+            </p>
+          </div>
+
+          <div class="stacked-card-item">
+            <span class="badge-pill" style="color: var(--success);">Level 04</span>
+            <h3 style="font-size: 1.8rem; color: #fff; margin: 12px 0;">Principal Fellow</h3>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              Sets the overarching technology strategy, leads frontier AI model integration, and shapes the long-term technological vision of LOGIX.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D CARD GALLERY -->
+    <section class="gallery-3d-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-cube"></i> <span>3D Squad Highlights</span></div>
+          <h2 class="section-title">What You'll Work With</h2>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 20px;">
+          <button id="gallery-prev-btn" class="scroll-arrow-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="gallery-next-btn" class="scroll-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="gallery-3d-viewport">
+          <div id="gallery-3d-stage" class="gallery-3d-stage">
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-engineering">Frontend</span>
+              <h3 style="color: #fff; margin-top: 10px;">React 19 & Next.js 16</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">TypeScript-first with Server Actions & Concurrent UI.</p>
+              <div style="color: var(--primary); font-size: 0.8rem;"><i class="fa-solid fa-bolt"></i> Modern Stack</div>
+            </div>
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-ai">Backend</span>
+              <h3 style="color: #fff; margin-top: 10px;">Node.js & Python</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Prisma ORM, PostgreSQL, Redis, and LangChain pipelines.</p>
+              <div style="color: var(--secondary); font-size: 0.8rem;"><i class="fa-solid fa-server"></i> Resilient APIs</div>
+            </div>
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-devops">Cloud</span>
+              <h3 style="color: #fff; margin-top: 10px;">Kubernetes & Docker</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Automated deployments with GitHub Actions and Terraform.</p>
+              <div style="color: var(--success); font-size: 0.8rem;"><i class="fa-solid fa-cloud"></i> Automated CI</div>
+            </div>
+            <div class="gallery-3d-card">
+              <span class="job-badge-tag badge-design">Design</span>
+              <h3 style="color: #fff; margin-top: 10px;">Figma Design Tokens</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Pixel-perfect synchronized design systems and tokens.</p>
+              <div style="color: var(--accent); font-size: 0.8rem;"><i class="fa-solid fa-palette"></i> Zero Drift</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE REVEAL ANIMATION SECTION -->
+    <section class="section" style="background: rgba(13, 18, 36, 0.4); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill"><i class="fa-solid fa-eye"></i> <span>Team Craft</span></div>
+          <h2 class="section-title">An Engineering Culture That Inspires</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px;">
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800" alt="Tech Conference" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 6px;">Sponsored Tech Conferences</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">We send our engineers to React Summit, AWS re:Invent, and NeurIPS annually.</p>
+            </div>
+          </div>
+
+          <div class="reveal-wrapper">
+            <div class="reveal-curtain"></div>
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Pair Programming" class="reveal-image-inner">
+            <div style="padding: 24px; background: var(--bg-card);">
+              <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 6px;">Collaborative Architecture Reviews</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">Every engineer has a voice in shaping system design and tool selection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <div>&copy; 2026 LOGIX Software House. All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jobs-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const jobId = urlParams.get("id") || "job-001";
+      const job = LogixStore.getJobById(jobId) || LogixStore.getJobs()[0];
+
+      if (!job) return;
+
+      document.getElementById("job-breadcrumb-title").textContent = job.title;
+      document.getElementById("job-main-title").textContent = job.title;
+      document.getElementById("job-dept-badge").textContent = job.department;
+      document.getElementById("job-type-badge").textContent = job.type;
+      document.getElementById("job-meta-location").textContent = job.location;
+      document.getElementById("job-meta-salary").textContent = job.salary;
+      document.getElementById("job-meta-exp").textContent = job.experience;
+      document.getElementById("job-meta-date").textContent = "Posted " + job.postedDate;
+      document.getElementById("job-full-description").textContent = job.description;
+
+      const tagsContainer = document.getElementById("job-tags-list");
+      tagsContainer.innerHTML = job.tags.map(t => `<span class="skill-pill">${t}</span>`).join("");
+
+      const respList = document.getElementById("job-responsibilities-list");
+      respList.innerHTML = job.responsibilities.map(r => `<li><i class="fa-solid fa-circle-check"></i> ${r}</li>`).join("");
+
+      const reqList = document.getElementById("job-requirements-list");
+      reqList.innerHTML = job.requirements.map(req => `<li><i class="fa-solid fa-circle-check"></i> ${req}</li>`).join("");
+
+      const benList = document.getElementById("job-benefits-list");
+      benList.innerHTML = job.benefits.map(b => `<li><i class="fa-solid fa-star" style="color: var(--warning);"></i> ${b}</li>`).join("");
+
+      document.getElementById("apply-button-link").href = `apply.html?id=${job.id}`;
+      document.getElementById("apply-button-hero").href = `apply.html?id=${job.id}`;
+    });
+  </script>
+</body>
+</html>
